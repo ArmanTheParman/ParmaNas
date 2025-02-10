@@ -9,3 +9,5 @@ sudo apt-get install -y wsdd
 sudo systemctl enable --now wsdd
 sudo systemctl enable --now smbd nmbd
 sudo systemctl enable --now nfs-server
+
+#firewall
