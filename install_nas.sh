@@ -1,13 +1,15 @@
-sudo adduser nasuser
+# NAS need Samba if Windows clients. Works with Linux
+# NFS works on Linux only.
+
 
 sudo apt-get update  -y
-sudo apt-get install -y nfs-kernel-server
-sudo apt-get install -y samba
-sudo apt-get install -y wsdd
 
+#variables  
+nas_directory=/srv/nas
+nasuser=$nasuser
 
-sudo systemctl enable --now wsdd
-sudo systemctl enable --now smbd nmbd
-sudo systemctl enable --now nfs-server
+#make users
+sudo adduser $nasuser
+
 
 #firewall

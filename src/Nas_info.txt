@@ -1,53 +1,7 @@
-#Nas info
-return 0
 
 
-# Just taking notes at this stage.
-set_terminal
 
-#Make a new user for better security
 
-sudo adduser nasuser
-
-########################################################################################
-Need Samba if Windows clients (Linux can too)
-########################################################################################
-sudo apt install samba -y
-
-EDIT: /etc/samba/smb.conf
-"
-[NAS]
-   path = /srv/nas
-   valid users = nas
-   read only = no
-   browsable = yes
-   guest ok = no
-   create mask = 0777
-   directory mask = 0777
-"
-sudo systemctl restart smbd
-
-#add Samba login password
-sudo smbpasswd -a nas
-
-Windows 10/11 relies on WS-Discovery instead of NetBIOS for network browsing. Install wsdd:
-sudo apt-get install wsdd 
-
-########################################################################################
-# NFS for Linux, more efficient than Samba
-########################################################################################
-sudo apt install nfs-kernel-server -y
-
-# set up export directory
-
-# copy to /etc/exports
-# /srv/nfs/share1 192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=$uid,anongid=$gid)
-# or
-# /srv/nfs/share2 192.168.0.100(ro,sync,no_subtree_check)
-
-# apply changes to table.
-sudo exportfs -arv
-sudo systemctl restart nfs-kernel-server
 
 ########################################################################################
 # mount on the client side
