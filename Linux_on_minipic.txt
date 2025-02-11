@@ -1,0 +1,31 @@
+Live boot with "e" and "nomodeset" (line that starts with linux, and before the double hyphen
+if that exists on the line), then control-x
+
+#mount the linux partition to /mnt
+sudo mount /dev/nvme0n1pX /mnt 
+
+#bind mount sys, dev, and proc
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+
+#mount devpts
+sudo mount -t devpts devpts /mnt/dev/pts
+
+#chroot into /mnt
+sudo chroot /mnt
+
+#change details 
+GRUB_TIMEOUT_STYLE=hidden --> GRUB_TIMEOUT_STYLE=menu
+GRUB_DISTRIBUTOR="Ubuntu" --> GRUB_DISTRIBUTOR="ParmanodL Linux Mint"
+
+#update grub
+sudo update-grub
+
+#exit chroot
+exit
+
+#if permanent nomodeset
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" --> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+#another option for the gmktek i7 intel
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.modeset=1"
