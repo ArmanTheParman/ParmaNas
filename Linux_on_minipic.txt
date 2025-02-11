@@ -34,8 +34,8 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.modeset=1"
 sudo apt install --reinstall libgl1-mesa-dri mesa-utils xserver-xorg-video-intel
 
 #for cloning to a new system
-chroot first
-then reinstall GRUB first, then run update-initramfs -u.
+sudo update-initramfs -u ###might be possible after boot, otherwise do chroot
+probably don't need to reinstall grub
 double check UUIDs for all drives in fstab, might not need any changes if properly cloned.
 
     
