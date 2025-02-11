@@ -29,3 +29,13 @@ exit
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" --> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
 #another option for the gmktek i7 intel
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.modeset=1"
+
+#gmktek i7, Desktop failure fix:
+sudo apt install --reinstall libgl1-mesa-dri mesa-utils xserver-xorg-video-intel
+
+#for cloning to a new system
+chroot first
+then reinstall GRUB first, then run update-initramfs -u.
+also need to updat UUIDs for all drives in fstab
+
+    
