@@ -1,11 +1,11 @@
 sudo apt-get update  -y
 sudo apt-get install -y samba
 #Windows 10/11 relies on WS-Discovery instead of NetBIOS for network browsing. Install wsdd.
-sudo apt-get install -y wsdd
+sudo apt-get install -y wsdd2
 
 
 #enable services
-sudo systemctl enable --now wsdd
+sudo systemctl enable --now wsdd2
 sudo systemctl enable --now smbd nmbd
 
 #edit samba file & restart smbd
