@@ -8,6 +8,7 @@ nasuser=parmanasuser
 nas_intro_and_choice || return 1
 
 #make users
+announce "${blue}You will be asked to enter a new password for the user $nasuser"
 sudo adduser $nasuser
 
 make_parmanas_directories || return 1
