@@ -81,11 +81,12 @@ sudo true
 clear
 
 if [[ $nas == samba ]] ; then
+    echo -e "Status Output for SAMBA\n"
     sudo smbstatus
     enter_continue
     return 0
 elif [[ $nas == nas ]] ; then
-    echo ""
+    echo -e "Status Output for NFS\n"
     sudo showmount -a
     echo ""
     enter_continue
