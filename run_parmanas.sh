@@ -25,7 +25,7 @@ for file in $HOME/parman_programs/parmanas/src/*.sh ; do
     source "$file"
 done
 
-check_parmanode_version_3_50_2_plus || exit
+check_parmanode_version_3_54_0_plus || exit
 
 export parminer=1
 do_loop $@ 
