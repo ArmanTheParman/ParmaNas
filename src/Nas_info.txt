@@ -1,18 +1,5 @@
 
 
-
-
-
-########################################################################################
-# mount on the client side
-########################################################################################
-# resvport selects a port lowever than 1024, an admin port
-# sudo mount -t nfs -o resvport,rw $IP:/mounted_directory /preverred_mount_point
-
-# example fstab entry, mac or linux
-# 192.168.3.1:/nas /mountpoint nfs rw,nolockd,resvport,hard,bg,intr,rw,tcp,rsize=65536,wsize=65536
-
-
 ########################################################################################
 # RAID
 ########################################################################################
