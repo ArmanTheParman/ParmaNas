@@ -34,7 +34,7 @@ sudo apt-get autoremove --purge -y
 }
 
 [[ $nas == nfs ]] && {
-sudo systemctl stop nfs-server >$dn 2>&1
+sudo systemctl stop nfs* >$dn 2>&1
 sudo systemctl disable nfs-server >$dn 2>&1
 sudo apt-get purge nfs-kernel-server -y 
 sudo apt-get autoremove --purge -y
