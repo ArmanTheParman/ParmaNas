@@ -22,19 +22,14 @@ else
     echo -en "\n\n    Please install Parmanode first. \n\n"
     exit
 fi
-debug "aftersourceparmanode"
 
 for file in $HOME/parman_programs/parmanas/src/*.sh ; do
     source "$file"
-    echo "$file"
 done
-debug wait
 check_parmanode_version_3_54_0_plus || exit
 
 export premium=1
 do_loop $@ 
 clear
-debug beforemenuparmans
 menu_parmanas
-debug endrunparmanas
 exit
