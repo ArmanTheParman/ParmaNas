@@ -29,17 +29,17 @@ set_terminal ; echo -e "
 
     $parmanasrunning
 $cyan
-                        so)              Status output
+                        so)$orange              Status output
 $cyan
-                        s)               Start $protcol
+                        s)$orange               Start $protcol
 $cyan
-                        stop)            Stop $protocol
+                        stop)$orange            Stop $protocol
 $cyan
-                        r)               Restart $protocol
+                        r)$orange               Restart $protocol
 
 
-
-NOTE: stopping the service may not disconnect existing connections
+$red
+NOTE: stopping the service may not disconnect existing connections$orange
 ########################################################################################
 "
 choose "xpmq" ; read choice
