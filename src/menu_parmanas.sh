@@ -1,5 +1,6 @@
 function menu_parmanas {
 while true ; do 
+unset nas parmanasrunning installpnas
 source $pc
 
 [[ $nas == nfs ]] && {
@@ -22,7 +23,7 @@ source $pc
 
 [[ -z $nas ]] && parmanasrunning="${red}NOT INSTALLED
 $orange
-                        i)$blue                 Install ParmaNas"
+                        i)$blue                 Install ParmaNas" && installpnas=allowed
 
 
 set_terminal ; echo -e "$blue
@@ -51,6 +52,10 @@ case $choice in
 q|Q|QUIT|Quit) exit 0 ;;
 p|P) menu_use ;; 
 m|M) back2main ;;
+i)
+[[ -z $installpnas ]] && continue
+install_parmanas
+;;
 so)
 status_output_parmanas
 ;;
