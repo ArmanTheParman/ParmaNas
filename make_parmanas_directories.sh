@@ -1,6 +1,5 @@
 function make_parmanas_directories {
 
-while true ; do
 set_terminal ; echo -e "
 ########################################################################################$cyan
                                 Directory Choice$orange
@@ -35,4 +34,5 @@ enter_continue ; jump $choice
 
 sudo test -e /srv/parmanas 2>$dn || sudo mkdir /srv/parmanas >$dn 2>&1
 sudo chown -R $nasuser:$nasuser /srv/parmanas
+return 0
 }
