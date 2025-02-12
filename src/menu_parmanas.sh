@@ -1,5 +1,6 @@
 function menu_parmanas {
 if ! grep -q "parmanas-end" $ic ; then return 0 ; fi
+
 while true ; do 
 source $pc
 
@@ -12,7 +13,7 @@ source $pc
     fi
 }
 
-if [[ $nas == samba ]] && {
+[[ $nas == samba ]] && {
     protocol=Samba
     if sudo systemctl status nmbd || sudo systemctl status samba ; then
         parmanasrunning="${green}Samba is RUNNING$blue"
