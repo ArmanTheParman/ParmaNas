@@ -32,9 +32,11 @@ case $choice in
 q|Q) exit ;; p|P) return ;; m|M) back2main ;;
 1)
 install=samba
+break
 ;;
 2)
 install=nfs
+break
 ;;
 *)
 invalid
