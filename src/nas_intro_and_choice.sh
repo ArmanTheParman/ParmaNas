@@ -1,18 +1,18 @@
 
 function nas_intro_and_choice {
 while true ; do
-set_terminal ; echo -e "
-########################################################################################$cyan
-                                     ParmaNas$orange
+set_terminal ; echo -e "$blue
+########################################################################################$orange
+                                     ParmaNas$blue
 ########################################################################################
 
 
     ParmaNas will enable drive sharing on your network. You have two protocol options.
 
-$cyan      
-               1)$orange Samba (Works on Linux/Mac and all Windows clients)
-$cyan
-               2)$orange NFS (Linux/Mac but faster, can work on some Windows)
+$orange
+               1)$blue   Samba (Works on Linux/Mac and all Windows clients)
+$orange
+               2)$blue   NFS (Linux/Mac but faster, can work on some Windows)
       
 
    If you anticipate connecting with a Windows computer, then select Samba. Samba is

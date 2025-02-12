@@ -23,6 +23,7 @@ source $pc
 
 [[ -z $nas ]] && parmanasrunning="${red}NOT INSTALLED
 $orange
+
                         i)$blue                 Install ParmaNas" && installpnas=allowed
 
 
