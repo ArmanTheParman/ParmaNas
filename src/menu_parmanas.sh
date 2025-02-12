@@ -163,7 +163,7 @@ return 0
 fi
 
 if [[ $nas == nfs ]] ; then
-set_terminal ; echo -e "$blue
+set_terminal "45" "110" ; echo -e "$blue
 ########################################################################################$orange
           Connecting to a NAS drive with NFS protocol using a Linux Client$blue
 ########################################################################################
