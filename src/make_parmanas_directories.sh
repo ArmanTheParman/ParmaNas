@@ -32,7 +32,7 @@ $blue
 "
 enter_continue ; jump $choice 
 
-sudo test -e $nas_directory 2>$dn || sudo mkdir $nas_directory >$dn 2>&1
+sudo test -e $nas_directory 2>$dn || sudo mkdir -p $nas_directory >$dn 2>&1
 sudo chown -R $nasuser:$nasuser $nas_directory
 return 0
 }
