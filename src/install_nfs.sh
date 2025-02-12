@@ -57,6 +57,7 @@ one)
 *) invalid ;;
 esac
 done
+fi
 
 
 # Set up /etc/exports
