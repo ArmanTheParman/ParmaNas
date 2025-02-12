@@ -54,7 +54,7 @@ case $choice in
 q|Q|QUIT|Quit) exit 0 ;;
 p|P) menu_use ;; 
 m|M) back2main ;;
-debugon) debug=1 ;;
+debugon) export debug=1 ;;
 debugoff) unset debug ;;
 i)
 [[ -z $installpnas ]] && continue
