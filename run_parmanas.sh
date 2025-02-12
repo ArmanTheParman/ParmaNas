@@ -31,6 +31,6 @@ export premium=1
 do_loop $@ 
 clear
 
-menu_parminer
+menu_parmanas
 
 exit
