@@ -6,40 +6,40 @@ source $pc
 [[ $nas == nfs ]] && {
     protocol=NFS
     if sudo systemctl status nfs-server ; then
-        parmanasrunning="${green}NFS is RUNNING$orange"
+        parmanasrunning="${green}NFS is RUNNING$blue"
     else
-        parmanasrunning="${red}NFS is NOT RUNNING$orange"
+        parmanasrunning="${red}NFS is NOT RUNNING$blue"
     fi
 }
 
 if [[ $nas == samba ]] && {
     protocol=Samba
     if sudo systemctl status nmbd || sudo systemctl status samba ; then
-        parmanasrunning="${green}Samba is RUNNING$orange"
+        parmanasrunning="${green}Samba is RUNNING$blue"
     elif ! sudo systemctl status nmbd && ! sudo systemctl status samba ; then
-        parmanasrunning="${red}Samba is NOT RUNNING$orange"
+        parmanasrunning="${red}Samba is NOT RUNNING$blue"
     fi
 }
 
 
 set_terminal ; echo -e "
-########################################################################################$cyan
-                                   ParmaNas Menu            $orange                   
+########################################################################################$orange
+                                   ParmaNas Menu            $blue
 ########################################################################################
 
     $parmanasrunning
-$cyan
-                        so)$orange              Status output
-$cyan
-                        s)$orange               Start $protcol
-$cyan
-                        stop)$orange            Stop $protocol
-$cyan
-                        r)$orange               Restart $protocol
+$orange
+                        so)$blue                Status output
+$orange
+                        s)$blue                 Start $protcol
+$orange
+                        stop)$blue              Stop $protocol
+$orange
+                        r)$blue                 Restart $protocol
 
 
 $red
-NOTE: stopping the service may not disconnect existing connections$orange
+NOTE: stopping the service may not disconnect existing connections$blue
 ########################################################################################
 "
 choose "xpmq" ; read choice

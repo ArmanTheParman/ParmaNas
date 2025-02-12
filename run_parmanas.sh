@@ -27,7 +27,7 @@ done
 
 check_parmanode_version_3_54_0_plus || exit
 
-export parminer=1
+export premium=1
 do_loop $@ 
 clear
 

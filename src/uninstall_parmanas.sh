@@ -1,14 +1,14 @@
 function uninstall_pamanas {
 while true ; do
-set_terminal ; echo -e "
+set_terminal ; echo -e "$blue
 ########################################################################################
-$cyan
+$orange
                                  Uninstall ParmaNas
 
 $green
     The data directory will not be deleted.                                 
 
-$orange
+$blue
     Are you sure? (y) (n)
 
 ########################################################################################
@@ -43,5 +43,5 @@ sudo rm -f /etc/exports >$dn 2>&1
 
 parmanode_conf_remove "nas="
 installed_conf_remove "parmanas-"
-success "Parmanas has been uninstalled"
+success "${blue}Parmanas has been uninstalled$orange"
 }
