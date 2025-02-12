@@ -1,5 +1,4 @@
 function menu_parmanas {
-read -p wait
 while true ; do 
 unset nas parmanasrunning installpnas
 source $pc
@@ -117,7 +116,7 @@ set_terminal ; echo -e "$blue
 
     Type on windows file explorer...
 $green
-        \\\\\\IP_address\\parmanas
+        \\\\\\$IP\\parmanas
 $blue
     or right click MyComputer, map network drive, and enter credentials (parmanasuser
     and the password).
@@ -132,9 +131,9 @@ set_terminal ; echo -e "$blue
 
     Create a directory on the client computer to mount to, eg ~/Desktop/nas
     
-    Run this command, or put it in a script (replace IP_address with correct value):
+    Run this command, or put it in a script:
 $green
-        mount_smbfs //parmanasuser@\$IP_address/parmanas ~/Desktop/nas
+        mount_smbfs //parmanasuser@$IP/parmanas ~/Desktop/nas
 $blue
 ########################################################################################
 "
@@ -151,10 +150,9 @@ $green
 $blue
     The mount command is:
 $green
-    sudo mount -t cifs -o username=parmanasuser //\$IP_address/parmanas ~/Desktop/nas
+    sudo mount -t cifs -o username=parmanasuser //$IP/parmanas ~/Desktop/nas
 $blue
-    Do put in the correct IP address, and make sure you have created a ~/Desktop/nas
-    directory to mount to.
+    Make sure you have created a$orange ~/Desktop/nas$blue directory to mount to.
 
     When done, you can unmount,$green sudo umount ~/Desktop/nas
 
@@ -174,10 +172,9 @@ set_terminal ; echo -e "$blue
 $green
     mkdir ~/desktop/nas
 $blue
-    Then run this command (a script will streamline it). Substitue the correct IP
-    address:
+    Then run this command (a script will streamline it): 
 $green
-        sudo mount -t nfs -o resvport,rw \$IP_address:/srv/parmanas ~/Desktop/nas 
+        sudo mount -t nfs -o resvport,rw $IP:/srv/parmanas ~/Desktop/nas 
 $blue
     Note, that resvport selects a port lowever than 1024, an admin port which is 
     needed if the nosecure setting is ommitted in the ParmaNas's /etc/exports file
@@ -186,7 +183,7 @@ $blue
     You could mess around with the fstab file for auto mountint, but be careful,
     and make a back up of it first. 
 $green
-        $IP_address:/srv/parmanas /home/username/Desktop/nas nfs rw,nolockd,resvport,hard,bg,intr,rw,tcp,rsize=65536,wsize=65536
+        $IP:/srv/parmanas /home/username/Desktop/nas nfs rw,nolockd,resvport,hard,bg,intr,rw,tcp,rsize=65536,wsize=65536
 $blue
     Maybe better not to do that, leave it for Parman to help you with it. Or instead,
     learn about Linux scripts and just make one with the earlier command so you don't
