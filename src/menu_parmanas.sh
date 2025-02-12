@@ -2,6 +2,7 @@ function menu_parmanas {
 while true ; do 
 unset nas parmanasrunning installpnas
 source $pc
+debug "nas = $nas"
 
 [[ $nas == nfs ]] && {
     protocol=NFS
