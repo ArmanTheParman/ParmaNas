@@ -20,7 +20,10 @@ source $pc
     fi
 }
 
-[[ -z $nas ]] && parmanasrunning="${red}NOT INSTALLED"
+[[ -z $nas ]] && parmanasrunning="${red}NOT INSTALLED
+$orange
+                        i)                     Install ParmaNas"
+
 
 set_terminal ; echo -e "$blue
 ########################################################################################$orange
