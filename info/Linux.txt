@@ -1,3 +1,5 @@
+#Notes on GMKTEK Linux install
+
 Live boot with "e" and "nomodeset" (line that starts with linux, and before the double hyphen
 if that exists on the line), then control-x
 
