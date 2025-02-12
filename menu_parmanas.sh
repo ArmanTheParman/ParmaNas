@@ -46,17 +46,18 @@ case $choice in
 q|Q|QUIT|Quit) exit 0 ;;
 p|P) menu_use ;; 
 m|M) back2main ;;
-
-start|Start|START|S|s)
-check_SSH || return 0
-please_wait ; echo "" ; echo "A BitBox App window should open soon."
-run_bitbox
-return 0 ;;
-
+start|s)
+start_parmanas
+;;
+stop)
+stop_parmanas
+;;
+r)
+restart_parmanas
+;;
 *)
 invalid
 ;;
-
 esac
 done
 } 
