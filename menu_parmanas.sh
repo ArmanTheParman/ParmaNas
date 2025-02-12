@@ -29,6 +29,8 @@ set_terminal ; echo -e "
 
     $parmanasrunning
 $cyan
+                        so)              Status output
+$cyan
                         s)               Start $protcol
 $cyan
                         stop)            Stop $protocol
@@ -46,6 +48,9 @@ case $choice in
 q|Q|QUIT|Quit) exit 0 ;;
 p|P) menu_use ;; 
 m|M) back2main ;;
+so)
+status_output_parmanas
+;
 start|s)
 start_parmanas
 ;;
@@ -61,3 +66,21 @@ invalid
 esac
 done
 } 
+
+function status_output_parmanas {
+clear
+
+if [[ $nas == samba ]] ; then
+    sudo smbstatus
+    enter_continue
+    return 0
+fi
+if [[ $nas == nas ]] ; then
+    echo ""
+    sudo showmount -a
+    enter_continue
+    return 0
+fi
+
+
+}
