@@ -9,6 +9,8 @@ fi
 
 if [ -e "$HOME/parman_programs/parmanode/src" ]; then
 
+    source $HOME/parman_programs/parmanode/src/config/parmanode_variables.sh    
+
     for file in "$HOME/parman_programs/parmanode/src"/*/*.sh; do
         [ -f "$file" ] && source "$file"
     done
