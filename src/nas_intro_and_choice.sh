@@ -10,15 +10,18 @@ set_terminal ; echo -e "
     ParmaNas will enable drive sharing on your network. You have two protocol options.
 
 $cyan      
-               1)$orange Samba (Works on Linux/Mac and Windows clients)
+               1)$orange Samba (Works on Linux/Mac and all Windows clients)
 $cyan
-               2)$orange NFS (Linux/Mac only but faster)
+               2)$orange NFS (Linux/Mac but faster, can work on some Windows)
       
 
-   If you anticipate connecting with a Windows computer, then select Samba.
+   If you anticipate connecting with a Windows computer, then select Samba. Samba is
+   optimised for Windows, so it's better to choose that, even if NFS might work
+   on your Windows machine. Ideally, discard all Windows computers - just get Bill
+   Gates out of your life.
 
-   This software does not support connnecting with both as it can lead to data
-   corruption. Please don't try to override this yourself.
+   This software does not support connnecting with both Samba and NFS as doing that 
+   can lead to data corruption. Please don't try to override this yourself.
 
 
 ########################################################################################
