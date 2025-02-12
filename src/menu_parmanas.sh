@@ -88,7 +88,7 @@ if [[ $nas == samba ]] ; then
     sudo smbstatus
     enter_continue
     return 0
-elif [[ $nas == nas ]] ; then
+elif [[ $nas == nfs ]] ; then
     echo -e "Status Output for NFS\n"
     sudo showmount -a
     echo ""
