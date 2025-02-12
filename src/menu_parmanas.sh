@@ -1,7 +1,6 @@
 function menu_parmanas {
 while true ; do 
 source $pc
-debug 2
 
 [[ $nas == nfs ]] && {
     protocol=NFS
@@ -21,7 +20,6 @@ debug 2
     fi
 }
 
-debug 3
 set_terminal ; echo -e "$blue
 ########################################################################################$orange
                                    ParmaNas Menu            $blue
@@ -43,7 +41,6 @@ NOTE: stopping the service may not disconnect existing connections$blue
 ########################################################################################
 "
 choose "xpmq" ; read choice
-debug 4
 jump $choice || { invalid ; continue ; } ; set_terminal
 case $choice in 
 q|Q|QUIT|Quit) exit 0 ;;
@@ -76,13 +73,15 @@ if [[ $nas == samba ]] ; then
     sudo smbstatus
     enter_continue
     return 0
-fi
-if [[ $nas == nas ]] ; then
+elif [[ $nas == nas ]] ; then
     echo ""
     sudo showmount -a
     echo ""
     enter_continue
     return 0
+else
+    enter_continue
+    return 1
 fi
 
 
