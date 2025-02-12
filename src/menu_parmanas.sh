@@ -50,7 +50,7 @@ p|P) menu_use ;;
 m|M) back2main ;;
 so)
 status_output_parmanas
-;
+;;
 start|s)
 start_parmanas
 ;;
