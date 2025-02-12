@@ -5,7 +5,7 @@ source $pc
 
 [[ $nas == nfs ]] && {
     protocol=NFS
-    if sudo systemctl status nfs-server ; then
+    if sudo systemctl status nfs-server >$dn 2>&1; then
         parmanasrunning="${green}NFS is RUNNING$blue"
     else
         parmanasrunning="${red}NFS is NOT RUNNING$blue"
@@ -14,7 +14,7 @@ source $pc
 
 [[ $nas == samba ]] && {
     protocol=Samba
-    if sudo systemctl status nmbd || sudo systemctl status samba ; then
+    if sudo systemctl status nmbd >$dn 2>&1 || sudo systemctl status samba ; then
         parmanasrunning="${green}Samba is RUNNING$blue"
     elif ! sudo systemctl status nmbd && ! sudo systemctl status samba ; then
         parmanasrunning="${red}Samba is NOT RUNNING$blue"
