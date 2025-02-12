@@ -23,5 +23,5 @@ else
 fi
 
 installed_conf_add "parmanas-end"
-success "ParmaNas has been installe"
+success "ParmaNas has been installed"
 }
