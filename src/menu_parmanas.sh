@@ -1,7 +1,4 @@
 function menu_parmanas {
-if ! grep -q "parmanas-end" $ic ; then return 0 ; fi
-debug 1
-
 while true ; do 
 source $pc
 debug 2
