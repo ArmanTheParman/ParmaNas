@@ -68,6 +68,7 @@ done
 } 
 
 function status_output_parmanas {
+sudo true
 clear
 
 if [[ $nas == samba ]] ; then
