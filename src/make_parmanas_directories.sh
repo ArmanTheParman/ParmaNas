@@ -6,7 +6,7 @@ set_terminal ; echo -e "
 ########################################################################################
 
 
-    ParmaNas will create a directory on your system:$orange /srv/parmanas$blue if it
+    ParmaNas will create a directory on your system:$orange $nas_directory$blue if it
     doesn't exist.
     
     You can put your files here, or, you can mount a drive to this location, which
@@ -19,7 +19,7 @@ set_terminal ; echo -e "
     a drive there, you need to change the ownership of the drive like this, after
     mounting...
 $orange
-       sudo chown -R $nasuser:$nasuser /srv/parmanas 
+       sudo chown -R $nasuser:$nasuser $nas_directory
     
     Then it should work. If you have issues mounting, make sure you use$orange sudo$blue and
     make sure no clients are connected to the drive.
@@ -32,7 +32,7 @@ $orange
 "
 enter_continue ; jump $choice 
 
-sudo test -e /srv/parmanas 2>$dn || sudo mkdir /srv/parmanas >$dn 2>&1
-sudo chown -R $nasuser:$nasuser /srv/parmanas
+sudo test -e $nas_directory 2>$dn || sudo mkdir $nas_directory >$dn 2>&1
+sudo chown -R $nasuser:$nasuser $nas_directory
 return 0
 }
