@@ -1,7 +1,7 @@
 function make_parmanas_directories {
 
 set_terminal ; echo -e "
-########################################################################################$orange
+########################################################################################$blue
                                 Directory Choice$blue
 ########################################################################################
 
@@ -20,7 +20,7 @@ set_terminal ; echo -e "
     mounting...
 $orange
        sudo chown -R $nasuser:$nasuser $nas_directory
-    
+$blue    
     Then it should work. If you have issues mounting, make sure you use$orange sudo$blue and
     make sure no clients are connected to the drive.
 
