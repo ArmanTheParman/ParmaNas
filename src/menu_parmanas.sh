@@ -1,4 +1,5 @@
 function menu_parmanas {
+read -p wait
 while true ; do 
 unset nas parmanasrunning installpnas
 source $pc
