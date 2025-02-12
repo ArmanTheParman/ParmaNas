@@ -1,4 +1,5 @@
 function install_parmanas {
+if [[ $OS == "Mac" ]] ; then nomac ; return 1 ; fi
 
 #variables  
 nas_directory=/srv/parmanas
@@ -10,7 +11,7 @@ nas_intro_and_choice || return 1
 sudo adduser $nasuser
 
 make_parmanas_directories || return 1
-installed_conf_add "nas-start"
+installed_conf_add "parmanas-start"
 
 if [[ $install == "samba" ]] ; then 
     install_samba
@@ -20,5 +21,6 @@ else
     parmanode_conf_add "nas=nfs"
 fi
 
-
+installed_conf_add "parmanas-end"
+success "ParmaNas has been installe"
 }

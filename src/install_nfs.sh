@@ -2,7 +2,6 @@ function install_nfs {
 #install dependendcies
 sudo apt-get update  -y
 sudo apt-get install -y nfs-kernel-server
-
 sudo systemctl enable --now nfs-server
 
 # Set up /etc/exports
