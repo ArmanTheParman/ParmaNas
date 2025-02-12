@@ -32,5 +32,5 @@ do_loop $@
 clear
 debug before menu parmans
 menu_parmanas
-
+debug end run parmanas
 exit
