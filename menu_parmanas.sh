@@ -79,6 +79,7 @@ fi
 if [[ $nas == nas ]] ; then
     echo ""
     sudo showmount -a
+    echo ""
     enter_continue
     return 0
 fi
