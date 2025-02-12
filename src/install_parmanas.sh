@@ -23,5 +23,7 @@ else
 fi
 
 installed_conf_add "parmanas-end"
+bluesuccesscolour="true"
 success "ParmaNas has been installed"
+unset bluesuccesscolour
 }
