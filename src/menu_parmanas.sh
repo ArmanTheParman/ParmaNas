@@ -1,8 +1,10 @@
 function menu_parmanas {
 if ! grep -q "parmanas-end" $ic ; then return 0 ; fi
+debug 1
 
 while true ; do 
 source $pc
+debug 2
 
 [[ $nas == nfs ]] && {
     protocol=NFS
@@ -22,7 +24,7 @@ source $pc
     fi
 }
 
-
+debug 3
 set_terminal ; echo -e "
 ########################################################################################$orange
                                    ParmaNas Menu            $blue
@@ -44,6 +46,7 @@ NOTE: stopping the service may not disconnect existing connections$blue
 ########################################################################################
 "
 choose "xpmq" ; read choice
+debug 4
 jump $choice || { invalid ; continue ; } ; set_terminal
 case $choice in 
 q|Q|QUIT|Quit) exit 0 ;;
