@@ -46,7 +46,17 @@ $orange
 choose xq ; read choice
 case $choice in
 q|Q) exit ;; p|P) return 1 ;;
-all) allowed_IP=$IP ; break ;;
+all) 
+
+IP_1=$(echo "$IP" | cut -d \. -f 1)
+IP_2=$(echo "$IP" | cut -d \. -f 2)
+IP_3=$(echo "$IP" | cut -d \. -f 3)
+
+allowed_IP="$IP_1.$IP_2.$IP_3.0/24"
+
+
+break
+;;
 one) 
     clear 
     echo -e "${blue}Please enter the IP address you want, then hit $orange<enter>$blue\n"
