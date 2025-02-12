@@ -14,7 +14,7 @@ sudo systemctl enable --now smbd nmbd
 #edit samba file & restart smbd
 
 echo "
-[NAS]
+[parmanas]
    path = $nas_directory
    valid users = $nasuser
    read only = no
