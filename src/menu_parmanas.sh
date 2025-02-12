@@ -20,6 +20,8 @@ source $pc
     fi
 }
 
+[[ -z $nas ]] && parmanasrunning="${red}NOT INSTALLED"
+
 set_terminal ; echo -e "$blue
 ########################################################################################$orange
                                    ParmaNas Menu            $blue
