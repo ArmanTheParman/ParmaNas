@@ -23,8 +23,9 @@ fi
 
 for file in $HOME/parman_programs/parmanas/src/*.sh ; do
     source "$file"
+    echo "$file"
 done
-
+debug wait
 check_parmanode_version_3_54_0_plus || exit
 
 export premium=1
