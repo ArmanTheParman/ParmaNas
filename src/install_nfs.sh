@@ -1,4 +1,6 @@
+function install_nfs {
 #install dependendcies
+sudo apt-get update  -y
 sudo apt-get install -y nfs-kernel-server
 
 sudo systemctl enable --now nfs-server
@@ -12,3 +14,4 @@ sudo systemctl enable --now nfs-server
 # apply changes to table.
 sudo exportfs -arv
 sudo systemctl restart nfs-kernel-server
+}
