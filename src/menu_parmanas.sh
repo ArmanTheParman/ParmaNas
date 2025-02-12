@@ -94,7 +94,7 @@ if [[ $nas == samba ]] ; then
     return 0
 elif [[ $nas == nfs ]] ; then
     echo -e "Status Output for NFS\n"
-    sudo netstat -tunp | grep :2048 | head -n100 #head removes colour
+    sudo netstat -tunp | grep :2049 | head -n100 #head removes colour
     echo ""
     debug "check tunp , $nas "
     enter_continue
