@@ -30,7 +30,7 @@ check_parmanode_version_3_54_0_plus || exit
 export premium=1
 do_loop $@ 
 clear
-
+debug before menu parmans
 menu_parmanas
 
 exit
