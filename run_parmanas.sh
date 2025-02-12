@@ -20,6 +20,7 @@ else
     echo -en "\n\n    Please install Parmanode first. \n\n"
     exit
 fi
+debug "aftersourceparmanode"
 
 for file in $HOME/parman_programs/parmanas/src/*.sh ; do
     source "$file"
