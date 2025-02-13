@@ -164,7 +164,7 @@ $blue
        $green sudo umount ~/Desktop/nas
        $blue If it says 'busy', add -f:
        $green sudo umount -f ~/Desktop/nas
-
+$blue
 ########################################################################################
 "
 enter_continue
@@ -200,7 +200,7 @@ $blue
        $green sudo umount ~/Desktop/nas
        $blue If it says 'busy', add -f:
        $green sudo umount -f ~/Desktop/nas
-
+$blue
 ############################################################################################################################################
 "
 enter_continue
