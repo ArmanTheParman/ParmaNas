@@ -45,6 +45,8 @@ $orange
 $orange
                         c)$blue                 How to connect
 $orange
+                        sript)$blue             Make a connection script
+$orange
                         uninstall)$blue         Uninstall ParmaNas
 
 $blue
@@ -76,6 +78,9 @@ restart_parmanas
 ;;
 c)
 how_to_connect_parmanas
+;;
+script)
+make_connection_script
 ;;
 uninstall)
 uninstall_parmanas
@@ -206,3 +211,39 @@ enter_continue
 return 0
 fi
 }
+
+function make_connection_script {
+
+set_terminal ; echo -e "$blue
+########################################################################################
+
+    Help to create a double-clickable script on your$green client computer$blue to connect
+    to this nas.
+
+    For Windoze, you don't need a script, just map the drive. Right-click My Computer,
+    and select the Map option. You need to put the parmanasuser as the user, and
+    the password for the user.
+    
+    For Linux/Mac, create a text file, name it what you want but for Mac, it's best 
+    to use the extension, ".command", and for Linux, ".sh".
+
+    Edit it and on the first line put:
+$orange
+    #!/bin/bash
+$blue
+    Then on the next line add the details needed to connect (see connection help menu)
+
+    Save and close the file, then make it executable:
+$orange
+    sudo chmod +x /path/to/file
+$blue
+    Now if you double click it the drive should mount.
+
+    If you want, you can make one to unmount as well. Start with #!/bin/bash, then
+    add the unmount command, save, and make it executable.
+
+########################################################################################
+"
+enter_continue
+}
+
