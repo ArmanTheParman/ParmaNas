@@ -47,8 +47,7 @@ $orange
 $red                    
                         uninstall)         Uninstall ParmaNas
 
-$red
-NOTE: stopping the service may not disconnect existing connections$blue
+$blue
 ########################################################################################
 "
 choose "xpmq" ; read choice
