@@ -45,7 +45,7 @@ $orange
 $orange
                         c)$blue                 How to connect
 $orange
-                        sript)$blue             Make a connection script
+                        sript)$blue             Make a connection/disconnection script
 $orange
                         uninstall)$blue         Uninstall ParmaNas
 
