@@ -226,13 +226,13 @@ set_terminal 38 105 ; echo -e "$blue
     extension, ".command", and for Linux, ".sh".
 
     Edit it and on the first line put:
-$orange
+$green
     #!/bin/bash
 $blue
     Then on the next line add the details needed to connect (see connection help menu)
 
     Save and close the file, then make it executable:
-$orange
+$green
     sudo chmod +x /path/to/file
 $blue
     Now if you double click it the drive should mount.
