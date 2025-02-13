@@ -216,7 +216,7 @@ function make_connection_script {
 
 set_terminal 38 105 ; echo -e "$blue
 #########################################################################################################$orange
-    How to create a double-clickable script on your$green client computer$orange to connect to this nas.
+    How to create a double-clickable script on your$green client computer$orange to connect to this nas.$blue
 #########################################################################################################
 
     For Windoze, you don't need a script, just map the drive. Right-click My Computer, and select the 
