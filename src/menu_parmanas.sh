@@ -44,8 +44,8 @@ $orange
                         r)$blue                 Restart $protocol
 $orange
                         c)$blue                 How to connect
-$red                    
-                        uninstall)         Uninstall ParmaNas
+$orange
+                        uninstall)$blue         Uninstall ParmaNas
 
 $blue
 ########################################################################################
