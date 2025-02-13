@@ -214,18 +214,16 @@ fi
 
 function make_connection_script {
 
-set_terminal ; echo -e "$blue
-########################################################################################
+set_terminal 38 105 ; echo -e "$blue
+#########################################################################################################
+    How to create a double-clickable script on your$green client computer$blue to connect to this nas.
+#########################################################################################################
 
-    Help to create a double-clickable script on your$green client computer$blue to connect
-    to this nas.
-
-    For Windoze, you don't need a script, just map the drive. Right-click My Computer,
-    and select the Map option. You need to put the parmanasuser as the user, and
-    the password for the user.
+    For Windoze, you don't need a script, just map the drive. Right-click My Computer, and select the 
+    Map option. You need to put the parmanasuser as the user, and the password for the user.
     
-    For Linux/Mac, create a text file, name it what you want but for Mac, it's best 
-    to use the extension, ".command", and for Linux, ".sh".
+    For Linux/Mac, create a text file, name it what you want but for Mac, it's best to use the 
+    extension, ".command", and for Linux, ".sh".
 
     Edit it and on the first line put:
 $orange
@@ -239,10 +237,10 @@ $orange
 $blue
     Now if you double click it the drive should mount.
 
-    If you want, you can make one to unmount as well. Start with #!/bin/bash, then
-    add the unmount command, save, and make it executable.
+    If you want, you can make one to unmount as well. Start with #!/bin/bash, then add the unmount 
+    command, save, and make it executable.
 
-########################################################################################
+#########################################################################################################
 "
 enter_continue
 }
