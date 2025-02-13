@@ -146,7 +146,7 @@ enter_continue
 
 set_terminal ; echo -e "$blue
 ########################################################################################$orange 
-             Connecting to a NAS drive with SAMBA protocol $green(Linux)$blue
+             Connecting to a NAS drive with SAMBA protocol $green(Linux/Mac)$blue
 ########################################################################################
 
     You need to make sure cifs-utils is insalled. For Debian based systems, do...
@@ -159,7 +159,11 @@ $green
 $blue
     Make sure you have created a$orange ~/Desktop/nas$blue directory to mount to.
 
-    When done, you can unmount,$green sudo umount ~/Desktop/nas
+    When done, you can unmount:
+    
+       $green sudo umount ~/Desktop/nas
+       $blue If it says 'busy', add -f:
+       $green sudo umount -f ~/Desktop/nas
 
 ########################################################################################
 "
@@ -190,6 +194,12 @@ $green
 $blue
     Maybe better not to do that, leave it for Parman to help you with it. Or instead, learn about Linux scripts and just make one with the 
     earlier command so you don't have to type it out each time your computer reboots.
+
+    When done, you can unmount:
+    
+       $green sudo umount ~/Desktop/nas
+       $blue If it says 'busy', add -f:
+       $green sudo umount -f ~/Desktop/nas
 
 ############################################################################################################################################
 "
