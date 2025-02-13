@@ -163,33 +163,30 @@ return 0
 fi
 
 if [[ $nas == nfs ]] ; then
-set_terminal "45" "160" ; echo -e "$blue
-########################################################################################$orange
-          Connecting to a NAS drive with NFS protocol using a Linux Client$blue
-########################################################################################
+set_terminal "45" "140" ; echo -e "$blue
+############################################################################################################################################$orange
+                               Connecting to a NAS drive with NFS protocol using a Linux Client$blue
+############################################################################################################################################$orange
 
     Make a target directory on the client computer, eg
 $green
-    mkdir ~/desktop/nas
+             mkdir ~/desktop/nas
 $blue
     Then run this command (a script will streamline it): 
 $green
-        sudo mount -t nfs -o resvport,rw $IP:/srv/parmanas ~/Desktop/nas 
+             sudo mount -t nfs -o resvport,rw $IP:/srv/parmanas ~/Desktop/nas 
 $blue
-    Note, that resvport selects a port lowever than 1024, an admin port which is 
-    needed if the nosecure setting is ommitted in the ParmaNas's /etc/exports file
-    (it is ommitted).
+    Note, that resvport selects a port lowever than 1024, an admin port which is needed if the nosecure setting is ommitted in the 
+    ParmaNas's /etc/exports file (it is ommitted).
 
-    You could mess around with the fstab file for auto mountint, but be careful,
-    and make a back up of it first. 
+    You could mess around with the fstab file for auto mountint, but be careful, and make a back up of it first. 
 $green
-        $IP:/srv/parmanas /home/username/Desktop/nas nfs rw,nolockd,resvport,hard,bg,intr,rw,tcp,rsize=65536,wsize=65536
+             $IP:/srv/parmanas /home/username/Desktop/nas nfs rw,nolockd,resvport,hard,bg,intr,rw,tcp,rsize=65536,wsize=65536
 $blue
-    Maybe better not to do that, leave it for Parman to help you with it. Or instead,
-    learn about Linux scripts and just make one with the earlier command so you don't
-    have to type it out each time your computer reboots.
+    Maybe better not to do that, leave it for Parman to help you with it. Or instead, learn about Linux scripts and just make one with the 
+    earlier command so you don't have to type it out each time your computer reboots.
 
-########################################################################################
+############################################################################################################################################
 "
 enter_continue
 return 0
