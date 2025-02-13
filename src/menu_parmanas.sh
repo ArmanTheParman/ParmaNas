@@ -148,10 +148,10 @@ $blue
 "
 enter_continue
 
-set_terminal ; echo -e "$blue
-########################################################################################$orange 
-             Connecting to a NAS drive with SAMBA protocol $green(Linux/Mac)$blue
-########################################################################################
+set_terminal 38 105 ; echo -e "$blue
+#########################################################################################################$orange
+                  Connecting to a NAS drive with SAMBA protocol $green(Linux/Mac)$blue
+#########################################################################################################
 
     You need to make sure cifs-utils is insalled. For Debian based systems, do...
 $green
@@ -166,10 +166,10 @@ $blue
     When done, you can unmount:
     
        $green sudo umount ~/Desktop/nas
-       $blue If it says 'busy', add -f:
+       $blue If it says 'busy', add -f (On Macs, typically Spotlight indexing is the cause:
        $green sudo umount -f ~/Desktop/nas
 $blue
-########################################################################################
+#########################################################################################################
 "
 enter_continue
 return 0
