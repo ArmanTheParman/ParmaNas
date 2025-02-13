@@ -41,6 +41,7 @@ sudo apt-get autoremove --purge -y
 sudo rm -f /etc/exports >$dn 2>&1
 }
 
+sudo userdel parmanasuser
 parmanode_conf_remove "nas="
 installed_conf_remove "parmanas-"
 success "${blue}Parmanas has been uninstalled$orange"

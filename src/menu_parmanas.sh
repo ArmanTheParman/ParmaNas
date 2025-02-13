@@ -44,6 +44,8 @@ $orange
                         r)$blue                 Restart $protocol
 $orange
                         c)$blue                 How to connect
+$red                    
+                        uninstall)         Uninstall ParmaNas
 
 $red
 NOTE: stopping the service may not disconnect existing connections$blue
@@ -75,6 +77,9 @@ restart_parmanas
 ;;
 c)
 how_to_connect_parmanas
+;;
+uninstall)
+uninstall_parmanas
 ;;
 *)
 invalid
@@ -165,10 +170,10 @@ fi
 if [[ $nas == nfs ]] ; then
 set_terminal "38" "140" ; echo -e "$blue
 ############################################################################################################################################$orange
-                               Connecting to a NAS drive with NFS protocol using a Linux Client$blue
+                               Connecting to a NAS drive with NFS protocol using a Linux/Mac Client$blue
 ############################################################################################################################################$orange
 
-    Make a target directory on the client computer, eg
+    Make a target directory on the client computer, eg:
 $green
              mkdir ~/desktop/nas
 $blue
