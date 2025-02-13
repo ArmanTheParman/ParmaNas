@@ -150,7 +150,7 @@ enter_continue
 
 set_terminal 38 105 ; echo -e "$blue
 #########################################################################################################$orange
-                  Connecting to a NAS drive with SAMBA protocol $green(Linux/Mac)$blue
+                     Connecting to a NAS drive with SAMBA protocol $green(Linux/Mac)$blue
 #########################################################################################################
 
     You need to make sure cifs-utils is insalled. For Debian based systems, do...
