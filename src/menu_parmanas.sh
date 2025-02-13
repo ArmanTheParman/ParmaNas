@@ -202,7 +202,7 @@ $blue
     When done, you can unmount:
     
        $green sudo umount ~/Desktop/nas
-       $blue If it says 'busy', add -f:
+       $blue If it says 'busy', add -f (On Macs, typically Spotlight indexing is the cause:
        $green sudo umount -f ~/Desktop/nas
 $blue
 ############################################################################################################################################
